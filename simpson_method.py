@@ -72,4 +72,3 @@ if __name__ == '__main__':
     integral = simpsons_rule(f, a, b, n)
     # integral += simpsons_rule(f, c, d, n)
     print(bcolors.OKBLUE, f"Numerical Integration of definite integral in range [{a},{b}] is {integral}", bcolors.ENDC)
-.
