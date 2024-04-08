@@ -25,6 +25,10 @@ def trapezoidal_rule(f, a, b, n,Upper_bound=0):
 
 
 if __name__ == '__main__':
+    print(
+        "the git link:https:https://github.com/haikarmi/interpolation.git\n group:Almog Babila-209477678, Hai karmi-207265687, Yagel Batito-318271863, Meril Hasid-324569714\n date :18/03/24 \n student: hai karmi id: 207265687")
+    print("..........................................................................................")
+
     x = sp.symbols('x')
     f = math.e**(x**2)
     a = 0
@@ -32,4 +36,3 @@ if __name__ == '__main__':
     n = 2
     result = trapezoidal_rule(f, a, b, n,1)
     print(bcolors.OKBLUE,"Approximate integral:", result, bcolors.ENDC)
-    print("https://github.com/Babilabong/tester_3_nomarit\ngroup:Almog Babila 209477678, Hai karmi 207265678, Yagel Batito 318271863, Meril Hasid 324569714\nstudent:Almog Babila 209477678")

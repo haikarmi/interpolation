@@ -1,4 +1,8 @@
 import numpy as np
+import math
+from sympy import symbols, diff, sin, cos, tan
+
+
 
 def romberg_integration(f, a, b, n):
     """
@@ -33,14 +37,19 @@ def romberg_integration(f, a, b, n):
 
     return R[n - 1, n - 1]
 
+
 # Example function to integrate
 def example_function(x):
-    return 1/(2+(x**4))
+    return ((2 * (x ** 2)) + (cos(2 * (math.e ** (-2 * x))))) / ((2 * (x ** 3)) + (x ** 2) - 6)
+
 
 # Example usage
-a = 0  # Lower limit
-b = 1  # Upper limit
-n = 4  # Number of iterations
+
+a = -1 # Lower limit
+b = 0.7  # Upper limit
+n = 13  # Number of iterations
 approximation = romberg_integration(example_function, a, b, n)
 print("Approximation of integral:", approximation)
-print("https://github.com/Babilabong/tester_3_nomarit\ngroup:Almog Babila 209477678, Hai karmi 207265678, Yagel Batito 318271863, Meril Hasid 324569714\nstudent:Almog Babila 209477678")
+print(
+    "the git link:https:https://github.com/haikarmi/interpolation.git\n group:Almog Babila-209477678, Hai karmi-207265687, Yagel Batito-318271863, Meril Hasid-324569714\n date :18/03/24 \n student: hai karmi id: 207265687")
+print("..........................................................................................")

@@ -7,15 +7,17 @@ import sympy as sp
 
 from colors import bcolors
 from sympy.utilities.lambdify import lambdify
+
 x = sp.symbols('x')
 
-def simpson_max_error(f,Upper_bound,a,b,n):
+
+def simpson_max_error(f, Upper_bound, a, b, n):
     h = (b - a) / n
     for i in range(4):
         f = sp.diff(f)
 
     f = lambdify(x, f)
-    return (1/180) * (h**4) * (b-a) * f(Upper_bound)
+    return (1 / 180) * (h ** 4) * (b - a) * f(Upper_bound)
 
 
 def simpsons_rule(f, a, b, n):
@@ -52,18 +54,21 @@ def simpsons_rule(f, a, b, n):
 
 
 if __name__ == '__main__':
-    f = lambda x: math.e ** (x ** 2)
-    g = 1/(2+(x**4))
-    n = 4
-    a = 0
-    b = 1
+    print(
+        "the git link:https:https://github.com/haikarmi/interpolation.git\n group:Almog Babila-209477678, Hai karmi-207265687, Yagel Batito-318271863, Meril Hasid-324569714\n date :08/04/24 \n student: hai karmi id: 207265687")
+    print("..........................................................................................")
 
-    error = simpson_max_error(g,b,a,b,n)
-    print(error)
-    if(error>0.001):
-        print("max error in Simpson's is: ",error)
+    f = ((2 * (x ** 2)) + (cos(2 * (math.e ** (-2 * x))))) / ((2 * (x ** 3)) + (x ** 2) - 6)
+    g = lambda x: math.e ** (x ** 2)
+    n = 500
+    a = -1
+    b = 0.7
+    error = simpson_max_error(f, b, a, b, n)
+    # print(error)
+    if (error > 0.001):
+        print("max error in Simpson's is: ", error)
 
-    print( f" Division into n={n} sections ")
-    integral = simpsons_rule(g, a, b, n)
+    # print(f" Division into n={n} sections ")
+    integral = simpsons_rule(f, a, b, n)
+    # integral += simpsons_rule(f, c, d, n)
     print(bcolors.OKBLUE, f"Numerical Integration of definite integral in range [{a},{b}] is {integral}", bcolors.ENDC)
-    print("https://github.com/Babilabong/tester_3_nomarit\ngroup:Almog Babila 209477678, Hai karmi 207265678, Yagel Batito 318271863, Meril Hasid 324569714\nstudent:Almog Babila 209477678")

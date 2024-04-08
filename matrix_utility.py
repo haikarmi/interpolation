@@ -125,3 +125,4 @@ def partial_pivoting(A,i,N):
         A = np.dot(e_matrix, A)
         print(f"The matrix after elementary operation :\n {A}")
         print("------------------------------------------------------------------")
+

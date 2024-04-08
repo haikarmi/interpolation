@@ -83,6 +83,10 @@ def my_natural_cubic_spline(f,x0,clamped = 0):
 
 
 if __name__ == '__main__':
+    print(
+        "the git link:https:https://github.com/haikarmi/interpolation.git\n group:Almog Babila-209477678, Hai karmi-207265687, Yagel Batito-318271863, Meril Hasid-324569714\n date :18/03/24 \n student: hai karmi id: 207265687")
+    print("..........................................................................................")
+
     f = [(0, 0), (pi/6, 0.5), (pi/4, 0.7072), (pi/2, 1)]
     x0 = pi/3
     g = [(0, 1), (pi/2, 0)]
